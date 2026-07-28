@@ -6,6 +6,7 @@ Inspired by Instagram reels set to the song *“I Hope You Find Some Peace of Mi
 
 ![Project Screenshot](screenshot.png)
 <img width="1456" height="801" alt="image" src="https://github.com/user-attachments/assets/317c5dec-1618-4500-ab73-277eb4ac899a" />
+<img width="1436" height="802" alt="image" src="https://github.com/user-attachments/assets/15d0b1a0-0f78-4788-b28e-ae6e45d2ac81" />
 
 
 ---
