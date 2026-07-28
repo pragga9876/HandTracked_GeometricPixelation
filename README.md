@@ -5,6 +5,8 @@ A beginner TouchDesigner project that combines real-time hand tracking with geom
 Inspired by Instagram reels set to the song *“I Hope You Find Some Peace of Mind”*. Most of those reels were created with traditional video editing. This version explores a similar calm, abstract aesthetic using live hand tracking and generative geometry instead.
 
 ![Project Screenshot](screenshot.png)
+<img width="1456" height="801" alt="image" src="https://github.com/user-attachments/assets/317c5dec-1618-4500-ab73-277eb4ac899a" />
+
 
 ---
 
