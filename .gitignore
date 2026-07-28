@@ -1,0 +1,4 @@
+﻿toxes/
+*.tox
+.DS_Store
+Thumbs.db
