@@ -1,93 +1,96 @@
 # Hand-Tracked Geometric Pixelation
 
-A beginner TouchDesigner project exploring real-time hand tracking combined with geometric forms and pixelation.
+A beginner TouchDesigner project that combines real-time hand tracking with geometric shapes and a pixelation effect.
 
-This project was inspired by Instagram reels set to the song *“I Hope You Find Some Peace of Mind”*. Most of those reels were made with traditional video editing. I wanted to try a similar aesthetic using live interaction instead.
-
-**Demo Video**  
-https://youtu.be/qGwkrI9Rke0
-
-**Tutorial Followed**  
-https://youtu.be/om4VRC4TU_o
+Inspired by Instagram reels set to the song *“I Hope You Find Some Peace of Mind”*. Most of those reels were created with traditional video editing. This version explores a similar calm, abstract aesthetic using live hand tracking and generative geometry instead.
 
 ![Project Screenshot](screenshot.png)
 
 ---
 
-## What This Project Does
+## What it does
 
-- Real-time hand tracking using MediaPipe (red landmarks + green skeleton)
-- Large geometric shapes (triangular/polygonal forms) that respond to hand movement
-- A pixelation effect applied over the video
-- Everything runs live from a webcam
+- Uses **MediaPipe** hand tracking to detect both hands in real time (landmarks shown as red points + green skeleton)
+- Overlays large geometric shapes (triangular / polygonal forms) that interact with the tracked hands
+- Applies a customizable **pixelation** effect across the video
+- Runs entirely in real time from a webcam
 
-The overall look is soft, fragmented, and geometric.
+The visual result is a soft, fragmented, geometric look that responds to hand movement.
+
+---
+
+## Demo
+
+[Paste your YouTube demo video link here]
 
 ---
 
 ## Requirements
 
-- TouchDesigner 2025.32820 (or a compatible recent version)
-- MediaPipe TouchDesigner Plugin by Torin Blankensmith  
-  → https://github.com/torinmb/mediapipe-touchdesigner/releases
+- **TouchDesigner** 2025.32820 (or compatible recent version)
+- **MediaPipe TouchDesigner Plugin** by Torin Blankensmith  
+  Recommended version: the latest release (or the one you originally used)  
+  Download: https://github.com/torinmb/mediapipe-touchdesigner/releases
 
 ---
 
-## How to Open This Project
+## Project Structure (after setup)
 
-1. Download this repository and unzip it.
-2. Download the latest **release.zip** of the MediaPipe plugin from the link above and unzip it.
-3. Place the `toxes` folder from the MediaPipe release **next to** the `.toe` file.
+HandTracked_GeometricPixelation/
+├── Hand_Tracking.2.toe          ← your main project file
+├── screenshot.png               ← preview image
+├── toxes/                       ← from the MediaPipe release
+│   ├── MediaPipe.tox
+│   └── (other helper toxes)
+└── README.md
+
+
+---
+
+## How to set up
+
+1. Download this repository (Code → Download ZIP) and unzip it.
+
+2. Download the MediaPipe plugin:
+   - Go to https://github.com/torinmb/mediapipe-touchdesigner/releases
+   - Download the latest `release.zip`
+   - Unzip it
+
+3. Copy the entire `toxes` folder from the MediaPipe release and place it **next to** the `.toe` file.
+
 4. Open `Hand_Tracking.2.toe` in TouchDesigner.
-5. If you see a warning about a missing external tox:
+
+5. If the MediaPipe component shows a missing external tox warning:
    - Select the MediaPipe component
-   - Go to the Common page
-   - Turn on **Enable External .tox**
-   - Point it to `toxes/MediaPipe.tox`
-6. Allow webcam access.
+   - Go to the **Common** parameter page
+   - Enable **External .tox**
+   - Point the path to `toxes/MediaPipe.tox` (relative path preferred)
+
+6. Allow webcam access when prompted.
+
+The project should now run with live hand tracking and the geometric + pixelation effects.
 
 ---
 
-## Notes
+## Controls & Notes
 
-This is a beginner project made while learning TouchDesigner.  
-The goal was simply to combine hand tracking with geometric visuals and a pixelation effect.
+- Hand landmarks appear as red dots connected by green lines
+- A large geometric shape (triangle/polygon) is overlaid on the video
+- Pixelation intensity can be adjusted via the `pixelate` component (Horizontal & Vertical Pixel Size)
+- This is a beginner-level project created while learning TouchDesigner and following hand-tracking tutorials
 
 ---
 
-## Credits
+## Credits & Inspiration
 
-- MediaPipe TouchDesigner Plugin by Torin Blankensmith  
+- **MediaPipe TouchDesigner Plugin** by Torin Blankensmith  
   https://github.com/torinmb/mediapipe-touchdesigner
-- Tutorial by the original creator of the base hand-tracking setup  
-  https://youtu.be/om4VRC4TU_o
+- Visual inspiration from Instagram reels set to *“I Hope You Find Some Peace of Mind”*
+- Built as a learning project exploring real-time hand tracking + geometric abstraction
 
 ---
 
-## Footnote for Future Me (Important)
+## License
 
-### What’s the difference between `.toe` and `.tox`?
-
-- **`.toe`** = the full project file (your complete network)
-- **`.tox`** = a reusable component / plugin (like MediaPipe)
-
-When you drag MediaPipe into a project, TouchDesigner can either:
-
-1. **Embed** it inside the `.toe` (makes the file huge), or  
-2. Keep it as an **external** `.tox` (recommended). Your `.toe` only stores a path pointing to the `.tox` file.
-
-### Why did I have so much trouble uploading this to GitHub?
-
-I originally included the entire `toxes` folder (especially `MediaPipe.tox`, which is over 170 MB).  
-
-GitHub has a hard limit of **100 MB per file**. Even after I deleted the folder later, the large file was still sitting in the Git history from the first commit. That’s why normal `git push` kept failing.
-
-I had to rewrite the Git history to completely erase the large file before GitHub would accept the push. This is why the terminal process felt long and complicated.
-
-**Lesson for next time:**
-- Never commit large `.tox` files (especially MediaPipe).
-- Always keep MediaPipe external.
-- Add a `.gitignore` early that includes `toxes/` and `*.tox`.
-- Only upload your `.toe`, README, screenshots, and small assets you created yourself.
-
-This footnote exists so I don’t forget why all of that happened.
+Free for learning, personal use, and non-commercial projects.  
+Please credit the MediaPipe plugin if you share derivatives.
