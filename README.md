@@ -21,7 +21,7 @@ The visual result is a soft, fragmented, geometric look that responds to hand mo
 
 ## Demo
 
-[Paste your YouTube demo video link here]
+[[Paste your YouTube demo video link here]](https://youtu.be/qGwkrI9Rke0?si=QMZdGOK-HDKxmTHe)
 
 ---
 
